@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CalculoFrete</title>
+  <link rel="stylesheet" href="/pages/frete/style.css">
+  
+</head>
+<body>
+
+  <div class="container"> 
+        
+   <form class="formulario">
+    <img src="data:image/png;base64,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" alt="logo caminhao">
+     <h1>Cálculo de Frete</h1>
+      <h2 > valor do frete é</h2>
+    
+      <div class="input-area">
+        <input id="peso-frete" autofocus type="number" placeholder="Peso do Produto"/>
+        <span id="error-frete" class="texto-erro" hidden></span>
+      </div>
+      <div class="input-area">
+       <input id="trajeto" type="number" placeholder="Distância do Trajeto"/>
+       <span id="error-trajeto" class="texto-erro" hidden></span>
+      </div>
+    <button id="calcular" type="button" onclick="clicarNoBotao()">Calcular</button>
+    </form>
+  </div>
+  
+<script src="/pages/frete/script.js"></script>
+</body>
+</html>

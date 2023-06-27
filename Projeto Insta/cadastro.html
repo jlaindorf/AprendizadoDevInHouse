@@ -17,9 +17,15 @@
             <span id="erro-nome" class="texto-erro" hidden>Nome é obrigatório</span>
         </div>
             <input type="email" placeholder="Email"/>
-            <input type="tel" placeholder="Telefone"/>
+        <div class="input-area">
+            <input id="campo-telefone"type="tel" placeholder="Telefone"/>
+            <span id="erro-telefone" class="texto-erro" hidden></span>
+        </div> 
             <input type="text"placeholder="Nome de Usuário"/>
-            <input id="campo-senha" type="password" placeholder="senha"/>
+            <div class="input-area">
+                <input id="campo-senha" type="password" placeholder="Senha" />
+                <span id="error-senha" class="texto-erro" hidden></span>
+            </div>
             <button id="login-button" type="button" onclick="fazerCadastro()">entrar</button>
             <a href="">Esqueceu a senha?</a>
     </form>

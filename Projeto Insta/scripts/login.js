@@ -1,9 +1,10 @@
-console.log ('CHEGUEI ATE AQUI') 
+import {usuarios} from '../constantes/usuarios.js'
 
+document.getElementById('login-button').addEventListener("click", clicarNoBotao);
 function clicarNoBotao(){
-    var email= document.getElementById("campo-email").value
+    const email= document.getElementById("campo-email").value
     console.log(email)
-    var senha= document.getElementById("campo-senha").value
+    const senha= document.getElementById("campo-senha").value
     console.log(senha)
 
     document.getElementById('campo-email').classList.remove('input-error')
@@ -27,7 +28,19 @@ function clicarNoBotao(){
     document.getElementById('login-button').disabled = true
     document.getElementById('login-button').style.opacity = 0.5
     document.getElementById('login-button').innerText='Logando...'
-     window.location.href = './feed.html' /*redireciona para outra pagina ou link */
+       const usuarioEncontrado = usuarios.find(
+        (usuario) => usuario.email === email && usuario.password === senha)
+         if (usuarioEncontrado) {
+            window.location.href="./home.html" /*redireciona para outra pagina ou link */}
+            else{
+                document.getElementById('login-button').disabled = false
+                document.getElementById('login-button').style.opacity = 1
+                document.getElementById('login-button').innerText='Entrar'
+                alert("usuário nao encontrado")
+            }
+
+
+
     }
 
 

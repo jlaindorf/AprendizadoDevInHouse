@@ -102,6 +102,7 @@
       flex: 1;
       padding: 20px;
       background-color: #ece8e8;
+      margin-left: 200px;
   }
   
   .galeria-fotos {
@@ -123,9 +124,17 @@
   }
   .container-grid{
 
-    width:calc( 80% - 200px);
+    width:calc(80% - 200px);
     margin: 0 auto;
   }
   .container-grid img{
     width: 200px;
+  }
+
+  img{
+  width: 60px;
+  border-radius: 50%;
+  }
+  .lista{
+    width: 100%;
   }

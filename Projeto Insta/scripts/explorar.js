@@ -32,12 +32,19 @@ const urls = [
   ]
 
   function gerarLista() {
-    urls.map((url) =>{
-       const img = document.createElement('img')
-       img.setAttribute('src', url)
+    urls.map((url) => {
+         const img = document.createElement('img')     // <img src="" />
+         img.setAttribute('src', url)  // <img src="url" />
 
-       document.getElementById('lista').appendChild(img)
+      
+          // const a = document.createElement('a') // <a> </a>
+          // a.setAttribute('href', 'explorar.html') // <a href="explorar.html"> </a>
+          // a.innerHTML = 'Explore'
+          // <a href="explorar.html">Explore</a>
+         
+         document.getElementById('lista').appendChild(img) 
     })
-  }
-  window.onload = gerarLista /* gerar assim que renderizar a pagina*/
- 
+}
+
+
+window.onload = gerarLista 

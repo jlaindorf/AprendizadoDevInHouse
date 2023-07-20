@@ -78,8 +78,9 @@
       box-sizing: border-box;
       /* incluir padding e borda na largura total */
       overflow-y: auto;
-      position: fixed;
       /* adicionar barra de rolagem apenas quando necessário */
+  
+      position: fixed;
   }
   
   .sidebar ul {
@@ -101,7 +102,6 @@
   .content {
       flex: 1;
       padding: 20px;
-      background-color: #ece8e8;
       margin-left: 200px;
   }
   
@@ -120,21 +120,60 @@
   .galeria-fotos img {
      width: 350px;
       object-fit: cover;
-    
   }
-  .container-grid{
-
-    width:calc(80% - 200px);
-    margin: 0 auto;
+  
+  /* CSS  Explorar */
+  
+  .container-grid {
+      width: 80%;
+      /* width: calc(80% - 200px); */
+      margin: 0 auto;
   }
-  .container-grid img{
-    width: 200px;
+  
+  .container-grid img {
+      width: 200px;
   }
-
-  img{
-  width: 60px;
-  border-radius: 50%;
+  
+  
+  .container-grid-layout {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      grid-gap: 20px;
+      column-gap: 20px;
   }
-  .lista{
-    width: 100%;
+  
+  .container-grid-layout img {
+      width: 100%;
+      height: auto;
+  }
+  
+  /* CSS Seguidores */
+  
+  .tabela-seguidores {
+      width: 100%;
+      border: 0;
+  }
+  
+  .tabela-seguidores thead {
+      background-color: #286ee0;
+      color: #FFF;
+  }
+  
+  .tabela-seguidores tbody tr {
+      height: 48px;
+  }
+  
+  .tabela-seguidores tbody tr td {
+      text-align: center;
+  }
+  
+  td img {
+      border-radius: 50%;
+      width: 60px;
+  }
+  
+  .input-pesquisa {
+      width: 100%;
+      height: 32px;
+      margin-bottom: 20px;
   }

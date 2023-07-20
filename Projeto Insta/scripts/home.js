@@ -45,6 +45,10 @@ function mostrarInformacoes() {
     exibirImage()
 }
 
+function gerarTextoBemVindo(){
+    const nome = localStorage.getItem("nome_usuario")
+    document.getElementById("bem-vindo-usuario").innerText = "bem-vindo" + nome
+}
 
 window.onload = mostrarInformacoes
 

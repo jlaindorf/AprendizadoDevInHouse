@@ -1,7 +1,8 @@
 import {usuarios} from '../constantes/usuarios.js'
 
-document.getElementById('login-button').addEventListener("click", clicarNoBotao);
-function clicarNoBotao(){
+document.getElementById('form-login').addEventListener("submit", clicarNoBotao);
+function clicarNoBotao(event){
+    event.preventDefault()
     const email= document.getElementById("campo-email").value
     console.log(email)
     const senha= document.getElementById("campo-senha").value
@@ -31,6 +32,7 @@ function clicarNoBotao(){
        const usuarioEncontrado = usuarios.find(
         (usuario) => usuario.email === email && usuario.password === senha)
          if (usuarioEncontrado) {
+            localStorage.setItem("nome_usuario", "João")
             window.location.href="./home.html" /*redireciona para outra pagina ou link */}
             else{
                 document.getElementById('login-button').disabled = false
@@ -45,3 +47,10 @@ function clicarNoBotao(){
 
 
 }
+
+function bemvindo(){
+
+    alert("bem-vindo")
+    
+}
+setTimeout(bemvindo,2000)

@@ -1,0 +1,18 @@
+
+
+body{
+  background-color: rgb(230, 213, 213);
+}
+#bloco {
+
+    width: 50%;
+    height: 100px;
+    background-color: rgb(41, 128, 99);
+
+}
+
+input:focus{
+
+  outline-color: red;
+
+}

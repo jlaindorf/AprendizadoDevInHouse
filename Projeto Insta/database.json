@@ -1,0 +1,25 @@
+{
+  "usuarios": [
+    {
+      "nome": "julio",
+      "senha": "123123123",
+      "telefone": "51986508111",
+      "email": "julio@gmail.com",
+      "id": 1
+    },
+    {
+      "nome": "julio",
+      "senha": "123123123",
+      "telefone": "51986508111",
+      "email": "julio@gmail.com",
+      "id": 2
+    },
+    {
+      "nome": "julio",
+      "senha": "123123123",
+      "telefone": "51986508111",
+      "email": "julio@gmail.com",
+      "id": 3
+    }
+  ]
+}

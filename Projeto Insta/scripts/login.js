@@ -32,7 +32,7 @@ function clicarNoBotao(event){
        const usuarioEncontrado = usuarios.find(
         (usuario) => usuario.email === email && usuario.password === senha)
          if (usuarioEncontrado) {
-            localStorage.setItem("nome_usuario", "João")
+            localStorage.setItem("nome_usuario" , "João")
             window.location.href="./home.html" /*redireciona para outra pagina ou link */}
             else{
                 document.getElementById('login-button').disabled = false

@@ -11,6 +11,7 @@ import * as directives from 'vuetify/directives'
 const vuetify = createVuetify({ components, directives, icons: { defaultSet: 'mdi' }, })
 
 
-createApp(App).use(vuetify)
+createApp(App)
+.use(vuetify)
 .use(router)
 .mount('#app')

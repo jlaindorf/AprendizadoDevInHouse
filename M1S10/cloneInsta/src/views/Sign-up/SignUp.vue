@@ -80,6 +80,7 @@
 <script>
 import * as yup from 'yup'
 import { captureErrorYup } from '../../utils/captureErrorYup'
+import axios from 'axios'
 
 export default {
   data() {
@@ -128,34 +129,41 @@ export default {
           },
           { abortEarly: false }
         )
-        fetch('http://localhost:3000/api/register', {
-          method: 'POST',
-          body: JSON.stringify({
+
+        //cadastro com axios
+
+        axios ({
+          url : 'http://localhost:3000/api/register',
+          method : 'POST',
+          data:{ 
             name: this.name,
             email: this.email,
-            phone: this.phone,
+            contact: this.phone,
             password: this.password,
-            verifyPassword: this.verifyPassword,
             sponsor: this.sponsor,
             bio: this.bio,
             confirmTerms: this.confirmTerms,
             planType: this.planType
-          }),
-          headers: {
-            'Content-Type': 'application/json'
-          }
+           }
+
         })
-          .then((response) => {
-            console.log('entrei aqui no then')
-            if (response.ok === false) {
-              throw new Error()
-            }
-            return response.json()
-          })
-          .then((response) => {
+
+        //sucesso na requisição
+        .then((response) => {
             alert('Cadastrado com sucesso')
             this.$router.push('/')
           })
+          //cenario da falha , qualquer um diferente de 200
+          .catch((error) =>{
+            if(error.response.data.message){
+              alert(error.response?.data?.message)
+            }
+            else{
+              alert("Houve uma falha ao tentar carregar")
+            }
+          })
+
+
           .catch(() => {
             alert('Houve uma falha ao tentar cadastrar')
           })

@@ -1,4 +1,5 @@
 <template>
+   
      <h1>Conteúdo principal</h1>
     <p>Este é o conteúdo principal da página.</p>
     <p id="bem_vindo_usuario"></p>
@@ -59,6 +60,7 @@
             </v-card-text>
         </v-card>
     </div>
+
 </template>
 
 <script>

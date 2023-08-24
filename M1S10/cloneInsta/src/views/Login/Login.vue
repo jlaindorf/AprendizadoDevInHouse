@@ -51,9 +51,12 @@
             password: this.password
           }
         })
-        .then(() => {
-          console.log("logado com sucesso")
+        .then((response) => {
+          localStorage.setItem("instagram_token", response.data.token) //salvando o token na local storage
+          localStorage.setItem("instagram_name", response.data.name)
           this.$router.push('/home')
+          console.log(response.data.token) //token gerado pela api
+          
         })
         .catch(() => {
           alert("Falha ao realizar login")
